@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #1c1c1c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topnav .nav-left-items {
+  float: left;
+  display: inline;
+}
+.topnav .nav-btn-group {
+  position: relative;
+  margin: 5px 20px;
+}
+.topnav .nav-btn-group .left-nav-btn {
+  display: inline;
+  padding: 10px 6px;
+}
+.topnav .logo-placeholder {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topnav .nav-right-items {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+}
+.topnav .nav-right-items .dropdown-container .dropdown {
+  margin: 0px 10px;
+}
+
+.dropdown {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.btn {
+  padding: 8px 16px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+
+.primary-bg {
+  background-color: #49ba8e !important;
+  color: #ffffff !important;
+}
+
+.secondary-bg {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+.primary-outline {
+  background: none;
+  color: #49ba8e !important;
+  border: 1px solid #49ba8e;
+}
+
+.primary-outline:focus-visible {
+  border: 1px solid #49ba8e;
+}
+
+.main-section {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.grid-container {
+  padding: 20px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.round-badge {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.bold-b1 {
+  font-weight: 600;
+}
+.card {
+  padding: 0px;
+  margin: 10px 30px;
+}
+.card-head {
+  position: relative;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-head:hover {
+  opacity: 0.8;
+}
+
+.card-head .poster-container .release-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-head .play-btn-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.play-btn {
+  background: none;
+  color: #ffffff;
+}
+
+.play-btn img {
+  height: 45px;
+  width: 45px;
+  filter: invert(1);
+}
+
+.vote-like-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-like-container .like-count img {
+  height: 20px;
+  width: 20px;
+}
+
+.vote-like-container .like-count {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vote-like-container .vote-count {
+  font-size: 10px;
+  right: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.card-body {
+  max-width: 180px;
+}
+
+.card-body .movie-name {
+  font-size: 14px;
+}
+
+.poster-placeholder {
+  background-color: #333333;
+  width: 180px;
+  height: 240px;
+}
+
+.poster-placeholder span {
+  position: absolute;
+  left: 20%;
+  bottom: 25%;
+}
+.video-player-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.video-container {
+  width: 70%;
+}
+.video-fram {
+  border: none;
+  width: 100%;
+  height: 600px;
+}
+.video-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  height: 600px;
+  background: #9b9b9b14;
+  padding: 0 20px;
+}
+
+.video-detail-container .title {
+  position: relative;
+  top: 25px;
+  font-size: 24px;
+  font-weight: 800;
+}
+.video-detail-container .language {
+  position: relative;
+  top: 25px;
+  font-size: 14px;
+}
+
+.video-detail-container .geners {
+  position: relative;
+  top: 30px;
+  font-size: 10px;
+}
+
+.geners .genre {
+  margin: 4px;
+  padding: 0 8px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.card.active {
+  border: 3px solid #49ba8e;
+  border-radius: 5px;
+}
+
+.card .card-video-body {
+  position: relative;
+  width: max-content;
+}
+
+@media (min-width: 1600px) {
+  .card {
+    padding: 0px;
+    margin: 10px 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1539px) {
+  .card {
+    padding: 0px;
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width: 1441px) {
+  .card {
+    padding: 0px;
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    padding: 0px;
+    margin: 10px 20px;
+  }
+  .topnav .logo-placeholder {
+    font-size: 20px;
+  }
+  .topnav .nav-btn-group {
+    margin: 5px 5px;
+  }
+  .dropdown {
+    width: 120px;
+  }
+}
+
+@media (max-width: 769px) {
+  .card {
+    padding: 0px;
+    margin: 0px 15px;
+  }
+  .topnav .logo-placeholder {
+    font-size: 16px;
+  }
+  .topnav .nav-btn-group {
+    margin: 0px 5px;
+  }
+  .topnav .nav-right-items {
+    position: absolute;
+    right: 20px;
+    padding: 0px 4px;
+  }
+  .dropdown {
+    width: 112px;
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+  .btn {
+    padding: 8px 12px;
+    font-size: 8px;
+  }
+  .topnav .nav-right-items {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 426px) {
+  .card {
+    padding: 0px;
+    margin: 4px 6px;
+  }
+
+  .card .card-head img {
+    width: 150px;
+  }
+  .topnav .logo-placeholder {
+    font-size: 16px;
+  }
+  .topnav .nav-btn-group {
+    margin: 0px 5px;
+  }
+  .topnav .nav-right-items {
+    position: absolute;
+    right: 20px;
+    padding: 0px 4px;
+  }
+  .dropdown {
+    width: 112px;
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+  .btn {
+    padding: 8px 12px;
+    font-size: 8px;
+  }
+  .topnav .nav-right-items {
+    padding: 5px;
+  }
+  .poster-placeholder {
+    width: 150px;
+    height: 200px;
+  }
+  .card-body {
+    max-width: 150px;
+  }
+  .card .card-head .poster-container .vote-like-container img {
+    width: 20px;
   }
 }
