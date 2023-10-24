@@ -3,7 +3,6 @@ import { getGenres, getLanguages } from "../../services/apiService";
 const Navbar = () => {
   const [langs, setLangs] = useState([]);
   const [geners, setGeners] = useState([]);
-  const [type, setType] = useState(["Popular", "Fresh"]);
   useEffect(() => {
     setTimeout(() => {
       setLangs(getLanguages());
@@ -28,6 +27,7 @@ const Navbar = () => {
           <div className="dropdown-container">
             <select className="dropdown primary-outline">
               <option value="Popular">Popular</option>
+              <option value="fresh">Fresh</option>
             </select>
             <select className="dropdown primary-outline">
               {langs.map((lang, idx) => (
