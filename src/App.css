@@ -332,10 +332,17 @@ body {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 910px) {
   .card {
-    padding: 4px;
-    margin: 0px 15px;
+    padding: 2px;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding: 2px;
+    margin: 0px 10px;
   }
   .topnav .logo-placeholder {
     font-size: 16px;
@@ -358,6 +365,25 @@ body {
   }
   .topnav .nav-right-items {
     padding: 5px;
+  }
+}
+
+@media (max-width: 750px) {
+  .card {
+    padding: 2px;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topnav .nav-right-items {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    padding: 5px;
+  }
+  .topnav .nav-right-items .dropdown-container .dropdown {
+    margin: 0px 5px;
   }
 }
 
@@ -420,5 +446,116 @@ body {
   .video-detail-container {
     height: 120px;
     width: 80%;
+  }
+}
+@media (max-width: 380px) {
+  .topnav .nav-right-items {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    padding: 5px;
+  }
+  .topnav .nav-right-items .dropdown-container .dropdown {
+    margin: 0px 5px;
+  }
+  .dropdown {
+    width: 96px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+  .card .card-head img {
+    width: 120px;
+  }
+  .poster-placeholder {
+    width: 120px;
+    height: 180px;
+  }
+  .card-body {
+    max-width: 120px;
+  }
+}
+@media (max-width: 321px) {
+  .topnav .nav-right-items {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    padding: 5px;
+  }
+  .topnav .nav-right-items .dropdown-container .dropdown {
+    margin: 0px 2px;
+  }
+  .dropdown {
+    width: 85px;
+    padding: 2px 0px;
+    font-size: 11px;
+  }
+  .card .card-head img {
+    width: 100px;
+  }
+  .poster-placeholder {
+    width: 100px;
+    height: 150px;
+  }
+  .card-body {
+    max-width: 100px;
+  }
+  .video-player-container {
+    position: absolute;
+    width: 95%;
+    padding: 2px;
+  }
+  .video-container {
+    width: 100%;
+  }
+  .video-fram {
+    width: 100%;
+    height: 182px;
+  }
+  .video-detail-container {
+    height: 150px;
+    width: 86%;
+  }
+}
+
+@media (max-width: 300px) {
+  .topnav .nav-right-items {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    padding: 5px;
+  }
+  .topnav .nav-right-items .dropdown-container .dropdown {
+    margin: 0px 2px;
+  }
+  .dropdown {
+    width: 80px;
+    padding: 2px 0px;
+    font-size: 8px;
+  }
+  .card .card-head img {
+    width: 90px;
+  }
+  .poster-placeholder {
+    width: 90px;
+    height: 200px;
+  }
+  .card-body {
+    max-width: 90px;
+  }
+  .video-player-container {
+    position: absolute;
+    width: 95%;
+    padding: 2px;
+  }
+  .video-container {
+    width: 100%;
+  }
+  .video-fram {
+    width: 100%;
+    height: 182px;
+  }
+  .video-detail-container {
+    height: 150px;
+    width: 86%;
   }
 }
