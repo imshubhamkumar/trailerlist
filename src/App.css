@@ -2,11 +2,35 @@ body {
   margin: 0;
   background: #1c1c1c;
 }
+/* For Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #47474731;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #47474731;
+}
 
 .topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
   background-color: #000000;
   padding: 20px;
+  z-index: 99;
 }
 
 .topnav .nav-left-items {
@@ -30,7 +54,7 @@ body {
 
 .topnav .nav-right-items {
   position: absolute;
-  right: 20px;
+  right: 4%;
   padding: 5px;
 }
 .topnav .nav-right-items .dropdown-container .dropdown {
@@ -80,8 +104,12 @@ body {
 }
 
 .main-section {
+  position: absolute;
+  top: 12%;
   padding: 20px;
   color: #ffffff;
+  height: 80%;
+  overflow: auto;
 }
 
 .grid-container {
@@ -106,7 +134,7 @@ body {
   font-weight: 600;
 }
 .card {
-  padding: 0px;
+  padding: 10px;
   margin: 10px 30px;
 }
 .card-head {
@@ -189,12 +217,14 @@ body {
   bottom: 25%;
 }
 .video-player-container {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 90%;
+  left: 3%;
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
 }
 .video-container {
   width: 70%;
@@ -202,13 +232,13 @@ body {
 .video-fram {
   border: none;
   width: 100%;
-  height: 600px;
+  height: 520px;
 }
 .video-detail-container {
   display: flex;
   flex-direction: column;
   width: 26%;
-  height: 600px;
+  height: 520px;
   background: #9b9b9b14;
   padding: 0 20px;
 }
@@ -238,7 +268,7 @@ body {
   border-radius: 10px;
 }
 
-.card.active {
+.card .card-poster-container.active {
   border: 3px solid #49ba8e;
   border-radius: 5px;
 }
@@ -248,30 +278,37 @@ body {
   width: max-content;
 }
 
+.card .video-body-place {
+  height: 560px;
+}
+
 @media (min-width: 1600px) {
   .card {
-    padding: 0px;
-    margin: 10px 30px;
+    padding: 10px;
+    margin: 10px 28px;
   }
 }
 
 @media (max-width: 1539px) {
   .card {
-    padding: 0px;
+    padding: 8px;
     margin: 10px 20px;
   }
+  /* .main-section {
+    height: 86%;
+  } */
 }
 
 @media (max-width: 1441px) {
   .card {
-    padding: 0px;
+    padding: 8px;
     margin: 10px 15px;
   }
 }
 
 @media (max-width: 1024px) {
   .card {
-    padding: 0px;
+    padding: 6px;
     margin: 10px 20px;
   }
   .topnav .logo-placeholder {
@@ -283,11 +320,21 @@ body {
   .dropdown {
     width: 120px;
   }
+  .card .video-body-place {
+    height: 360px;
+  }
+  .video-fram {
+    width: 100%;
+    height: 320px;
+  }
+  .video-detail-container {
+    height: 320px;
+  }
 }
 
 @media (max-width: 769px) {
   .card {
-    padding: 0px;
+    padding: 4px;
     margin: 0px 15px;
   }
   .topnav .logo-placeholder {
@@ -298,7 +345,6 @@ body {
   }
   .topnav .nav-right-items {
     position: absolute;
-    right: 20px;
     padding: 0px 4px;
   }
   .dropdown {
@@ -317,8 +363,8 @@ body {
 
 @media (max-width: 426px) {
   .card {
-    padding: 0px;
-    margin: 4px 6px;
+    padding: 2px;
+    margin: 4px 4px;
   }
 
   .card .card-head img {
@@ -356,5 +402,23 @@ body {
   }
   .card .card-head .poster-container .vote-like-container img {
     width: 20px;
+  }
+  .card .video-body-place {
+    height: 360px;
+  }
+  .video-player-container {
+    display: block;
+    flex-direction: column;
+  }
+  .video-fram {
+    width: 100%;
+    height: 220px;
+  }
+  .video-container {
+    width: 90%;
+  }
+  .video-detail-container {
+    height: 120px;
+    width: 80%;
   }
 }

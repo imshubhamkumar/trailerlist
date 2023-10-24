@@ -3,8 +3,7 @@ const VideoPlayer = (props: any) => {
     if (props && !props.selected) {
         return null
     }
-    const { title, date, likes,
-        votes,
+    const { title,
         language,
         genres } = props.details
     return (

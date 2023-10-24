@@ -20,6 +20,7 @@ export const getMoviesData = async (): Promise<void> => {
   }
 };
 
+// to check wheither the image link is visible or not
 export const isImageAvailable = async (url: string): Promise<boolean> => {
   try {
     const response = await fetch(url);
@@ -36,7 +37,7 @@ export const isImageAvailable = async (url: string): Promise<boolean> => {
     return false;
   }
 };
-
+// Setting data for filter list and video list on load of the application
 const setData = (data: any): void => {
   Object.values(data.moviesData).forEach((element: any) => {
     const movie: movieType = {
@@ -64,6 +65,7 @@ const setData = (data: any): void => {
   isDataSet = true;
 };
 
+// to get the video id so that we could generate embad code to render the youtube
 const getYoutubeVideoID = (url: string) => {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
@@ -81,9 +83,4 @@ export const getLanguages = (): Array<string> => {
 
 export const getGenres = (): Array<string> => {
   return genres;
-};
-
-export const findRow = (num: number, itemPerRow: number) => {
-  const row = Math.ceil(num / itemPerRow + 1);
-  return row;
 };
